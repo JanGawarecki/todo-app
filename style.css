@@ -1,0 +1,12 @@
+body {
+  background-color: bisque;
+}
+
+header {
+  text-align: center;
+  background-color: brown;
+}
+
+#remove {
+  margin-top: 16px;
+}

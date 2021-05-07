@@ -1,7 +1,7 @@
+const doneToDos = [];
+
 function addATodo() {
   let toAddTodo = document.getElementById("todo").value;
-
-  console.log(toAddTodo);
 
   let addedTodo = document.createElement("li");
   let toDoDone = document.createElement("input");
@@ -10,5 +10,16 @@ function addATodo() {
   addedTodo.innerHTML = toAddTodo;
   toDoDone.setAttribute("type", "checkbox");
   toDoList.appendChild(addedTodo);
-  toDoList.appendChild(toDoDone);
+  addedTodo.appendChild(toDoDone);
+
+  doneToDos.push(addedTodo);
+  doneToDos.push(toDoDone);
+}
+
+function removeDoneToDos() {
+  for (todo of doneToDos) {
+    if (todo.checked == true) {
+      todo.parentElement.remove();
+    }
+  }
 }

@@ -25,3 +25,28 @@ function removeDoneToDos() {
     }
   }
 }
+
+//Function to hide open ToDos
+function hideUndoneToDos() {
+  for (todo of doneToDos) {
+    if (todo.checked == false) {
+      todo.parentElement.style.visibility = "hidden";
+    }
+  }
+}
+
+//Function to hide done ToDos
+function hideDoneToDos() {
+  for (todo of doneToDos) {
+    if (todo.checked == true) {
+      todo.parentElement.style.visibility = "hidden";
+    }
+  }
+}
+
+//Function to make all ToDos visible
+function showAllToDos() {
+  for (todo of doneToDos) {
+    todo.parentElement.style.visibility = "visible";
+  }
+}

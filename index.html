@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>todo-app</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header">
@@ -16,6 +21,10 @@
       <button id="add" onclick="addATodo()">Add</button>
       <br />
       <button id="remove" onclick="removeDoneToDos()">Remove Done ToDos</button>
+      <br />
+      <button id="hideOpen" onclick="hideUndoneToDos()">Done</button>
+      <button id="hideDone" onclick="hideDoneToDos()">Open</button>
+      <button id="showAll" onclick="showAllToDos()">All</button>
       <ul id="todo-list">
         List of ToDos
       </ul>

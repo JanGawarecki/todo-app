@@ -33,21 +33,21 @@ header {
   left: 70px;
 }
 
-#hideOpen {
+#onlyDone {
   position: relative;
   display: block;
   height: 25px;
   left: 70px;
 }
 
-#hideDone {
+#onlyOpen {
   position: relative;
   display: block;
   height: 25px;
   left: 70px;
 }
 
-#showAll {
+#all {
   position: relative;
   display: block;
   height: 25px;

@@ -21,6 +21,8 @@ function addATodo() {
 function removeDoneToDos() {
   for (todo of doneToDos) {
     if (todo.checked == true) {
+      let deleteToDoIndex = doneToDos.indexOf(todo.parentElement);
+      doneToDos.splice(deleteToDoIndex, 2);
       todo.parentElement.remove();
     }
   }

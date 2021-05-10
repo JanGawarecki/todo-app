@@ -4,17 +4,20 @@ const addedToDos = [];
 //Function for adding a ToDo to the List of ToDos
 function addATodo() {
   const toAddTodo = document.getElementById("todo").value;
-  const addedTodo = document.createElement("li");
-  const toDoDone = document.createElement("input");
-  const toDoList = document.getElementById("todo-list");
 
-  addedTodo.innerHTML = toAddTodo;
-  toDoDone.setAttribute("type", "checkbox");
-  toDoList.appendChild(addedTodo);
-  addedTodo.appendChild(toDoDone);
+  if (toAddTodo.length >= 6) {
+    const addedTodo = document.createElement("li");
+    const toDoDone = document.createElement("input");
+    const toDoList = document.getElementById("todo-list");
 
-  addedToDos.push(addedTodo);
-  addedToDos.push(toDoDone);
+    addedTodo.innerHTML = toAddTodo;
+    toDoDone.setAttribute("type", "checkbox");
+    toDoList.appendChild(addedTodo);
+    addedTodo.appendChild(toDoDone);
+
+    addedToDos.push(addedTodo);
+    addedToDos.push(toDoDone);
+  }
 
   document.getElementById("todo").value = " ";
 }

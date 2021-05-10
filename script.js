@@ -15,6 +15,8 @@ function addATodo() {
 
   addedToDos.push(addedTodo);
   addedToDos.push(toDoDone);
+
+  document.getElementById("todo").value = " ";
 }
 
 //Function to remove the done ToDos from the List of ToDos

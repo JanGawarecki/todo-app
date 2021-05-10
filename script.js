@@ -1,5 +1,5 @@
-//Add array for done ToDos
-const doneToDos = [];
+//Add array for added ToDos
+const addedToDos = [];
 
 //Function for adding a ToDo to the List of ToDos
 function addATodo() {
@@ -13,16 +13,16 @@ function addATodo() {
   toDoList.appendChild(addedTodo);
   addedTodo.appendChild(toDoDone);
 
-  doneToDos.push(addedTodo);
-  doneToDos.push(toDoDone);
+  addedToDos.push(addedTodo);
+  addedToDos.push(toDoDone);
 }
 
 //Function to remove the done ToDos from the List of ToDos
 function removeDoneToDos() {
-  for (todo of doneToDos) {
+  for (todo of addedToDos) {
     if (todo.checked == true) {
-      let deleteToDoIndex = doneToDos.indexOf(todo.parentElement);
-      doneToDos.splice(deleteToDoIndex, 2);
+      let deleteToDoIndex = addedToDos.indexOf(todo.parentElement);
+      addedToDos.splice(deleteToDoIndex, 2);
       todo.parentElement.remove();
     }
   }
@@ -30,7 +30,7 @@ function removeDoneToDos() {
 
 //Function to show only done ToDos
 function showOnlyDoneToDos() {
-  for (todo of doneToDos) {
+  for (todo of addedToDos) {
     if (todo.checked == false) {
       todo.parentElement.style.visibility = "hidden";
     } else {
@@ -41,7 +41,7 @@ function showOnlyDoneToDos() {
 
 //Function to show only open ToDos
 function showOnlyOpenToDos() {
-  for (todo of doneToDos) {
+  for (todo of addedToDos) {
     if (todo.checked == true) {
       todo.parentElement.style.visibility = "hidden";
     } else {
@@ -52,7 +52,7 @@ function showOnlyOpenToDos() {
 
 //Function to make all ToDos visible
 function showAllToDos() {
-  for (todo of doneToDos) {
+  for (todo of addedToDos) {
     todo.parentElement.style.visibility = "visible";
   }
 }

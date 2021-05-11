@@ -22,6 +22,14 @@ function addATodo() {
   document.getElementById("todo").value = " ";
 }
 
+//Feature allowing to add todos when pressing enter in the textboox
+const input = document.getElementById("todo");
+input.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    addATodo();
+  }
+});
+
 //Function to remove the done ToDos from the List of ToDos
 function removeDoneToDos() {
   for (todo of addedToDos) {

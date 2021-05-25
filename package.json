@@ -1,0 +1,25 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webserver": "serve ./src",
+    "e2e": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanGawarecki/todo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JanGawarecki/todo-app/issues"
+  },
+  "homepage": "https://github.com/JanGawarecki/todo-app#readme",
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "serve": "^11.3.2"
+  }
+}
